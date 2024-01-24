@@ -10,7 +10,7 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	uuid "github.com/gofrs/uuid/v5"
-	"github.com/suyuan32/simple-admin-message-center/ent/smslog"
+	"github.com/iot-synergy/synergy-message-center/ent/smslog"
 )
 
 // SmsLog is the model entity for the SmsLog schema.

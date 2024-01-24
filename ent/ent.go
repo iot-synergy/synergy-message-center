@@ -12,10 +12,10 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
-	"github.com/suyuan32/simple-admin-message-center/ent/emaillog"
-	"github.com/suyuan32/simple-admin-message-center/ent/emailprovider"
-	"github.com/suyuan32/simple-admin-message-center/ent/smslog"
-	"github.com/suyuan32/simple-admin-message-center/ent/smsprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/emaillog"
+	"github.com/iot-synergy/synergy-message-center/ent/emailprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/smslog"
+	"github.com/iot-synergy/synergy-message-center/ent/smsprovider"
 )
 
 // ent aliases to avoid import conflicts in user's code.

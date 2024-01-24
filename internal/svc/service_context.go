@@ -1,11 +1,12 @@
 package svc
 
 import (
-	"github.com/redis/go-redis/v9"
-	"github.com/suyuan32/simple-admin-message-center/ent"
-	"github.com/suyuan32/simple-admin-message-center/internal/config"
-	"github.com/suyuan32/simple-admin-message-center/internal/utils/smssdk"
 	"net/smtp"
+
+	"github.com/iot-synergy/synergy-message-center/ent"
+	"github.com/iot-synergy/synergy-message-center/internal/config"
+	"github.com/iot-synergy/synergy-message-center/internal/utils/smssdk"
+	"github.com/redis/go-redis/v9"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

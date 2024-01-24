@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/suyuan32/simple-admin-common/config"
+	"github.com/iot-synergy/synergy-common/config"
 	"github.com/zeromicro/go-zero/zrpc"
 )
 

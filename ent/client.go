@@ -10,15 +10,15 @@ import (
 	"reflect"
 
 	uuid "github.com/gofrs/uuid/v5"
-	"github.com/suyuan32/simple-admin-message-center/ent/migrate"
+	"github.com/iot-synergy/synergy-message-center/ent/migrate"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
-	"github.com/suyuan32/simple-admin-message-center/ent/emaillog"
-	"github.com/suyuan32/simple-admin-message-center/ent/emailprovider"
-	"github.com/suyuan32/simple-admin-message-center/ent/smslog"
-	"github.com/suyuan32/simple-admin-message-center/ent/smsprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/emaillog"
+	"github.com/iot-synergy/synergy-message-center/ent/emailprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/smslog"
+	"github.com/iot-synergy/synergy-message-center/ent/smsprovider"
 
 	stdsql "database/sql"
 )

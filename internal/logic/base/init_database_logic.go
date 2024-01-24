@@ -2,17 +2,18 @@ package base
 
 import (
 	"context"
+
 	"entgo.io/ent/dialect/sql/schema"
-	"github.com/suyuan32/simple-admin-common/enum/errorcode"
-	"github.com/suyuan32/simple-admin-common/i18n"
-	"github.com/suyuan32/simple-admin-common/msg/logmsg"
-	"github.com/suyuan32/simple-admin-message-center/ent"
-	"github.com/suyuan32/simple-admin-message-center/internal/enum/emailauthtype"
-	"github.com/suyuan32/simple-admin-message-center/internal/utils/dberrorhandler"
+	"github.com/iot-synergy/synergy-common/enum/errorcode"
+	"github.com/iot-synergy/synergy-common/i18n"
+	"github.com/iot-synergy/synergy-common/msg/logmsg"
+	"github.com/iot-synergy/synergy-message-center/ent"
+	"github.com/iot-synergy/synergy-message-center/internal/enum/emailauthtype"
+	"github.com/iot-synergy/synergy-message-center/internal/utils/dberrorhandler"
 	"github.com/zeromicro/go-zero/core/errorx"
 
-	"github.com/suyuan32/simple-admin-message-center/internal/svc"
-	"github.com/suyuan32/simple-admin-message-center/types/mcms"
+	"github.com/iot-synergy/synergy-message-center/internal/svc"
+	"github.com/iot-synergy/synergy-message-center/types/mcms"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

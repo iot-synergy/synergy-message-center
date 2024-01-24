@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/suyuan32/simple-admin-message-center/ent"
+	"github.com/iot-synergy/synergy-message-center/ent"
 )
 
 // The EmailLogFunc type is an adapter to allow the use of ordinary

@@ -9,7 +9,7 @@ import (
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
-	"github.com/suyuan32/simple-admin-message-center/ent/smsprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/smsprovider"
 )
 
 // SmsProvider is the model entity for the SmsProvider schema.

@@ -6,11 +6,11 @@ import (
 	"time"
 
 	uuid "github.com/gofrs/uuid/v5"
-	"github.com/suyuan32/simple-admin-message-center/ent/emaillog"
-	"github.com/suyuan32/simple-admin-message-center/ent/emailprovider"
-	"github.com/suyuan32/simple-admin-message-center/ent/schema"
-	"github.com/suyuan32/simple-admin-message-center/ent/smslog"
-	"github.com/suyuan32/simple-admin-message-center/ent/smsprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/emaillog"
+	"github.com/iot-synergy/synergy-message-center/ent/emailprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/schema"
+	"github.com/iot-synergy/synergy-message-center/ent/smslog"
+	"github.com/iot-synergy/synergy-message-center/ent/smsprovider"
 )
 
 // The init function reads all schema descriptors with runtime code

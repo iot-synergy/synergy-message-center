@@ -10,7 +10,7 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/suyuan32/simple-admin-message-center/ent/smsprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/smsprovider"
 )
 
 // SmsProviderCreate is the builder for creating a SmsProvider entity.

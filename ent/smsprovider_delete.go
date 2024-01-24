@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/suyuan32/simple-admin-message-center/ent/predicate"
-	"github.com/suyuan32/simple-admin-message-center/ent/smsprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/predicate"
+	"github.com/iot-synergy/synergy-message-center/ent/smsprovider"
 )
 
 // SmsProviderDelete is the builder for deleting a SmsProvider entity.

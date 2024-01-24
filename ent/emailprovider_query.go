@@ -10,8 +10,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/suyuan32/simple-admin-message-center/ent/emailprovider"
-	"github.com/suyuan32/simple-admin-message-center/ent/predicate"
+	"github.com/iot-synergy/synergy-message-center/ent/emailprovider"
+	"github.com/iot-synergy/synergy-message-center/ent/predicate"
 )
 
 // EmailProviderQuery is the builder for querying EmailProvider entities.

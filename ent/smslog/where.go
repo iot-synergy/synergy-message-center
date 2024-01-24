@@ -7,7 +7,7 @@ import (
 
 	"entgo.io/ent/dialect/sql"
 	uuid "github.com/gofrs/uuid/v5"
-	"github.com/suyuan32/simple-admin-message-center/ent/predicate"
+	"github.com/iot-synergy/synergy-message-center/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

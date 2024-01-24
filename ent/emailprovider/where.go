@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"github.com/suyuan32/simple-admin-message-center/ent/predicate"
+	"github.com/iot-synergy/synergy-message-center/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

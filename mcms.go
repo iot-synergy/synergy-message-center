@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/suyuan32/simple-admin-message-center/internal/config"
-	"github.com/suyuan32/simple-admin-message-center/internal/server"
-	"github.com/suyuan32/simple-admin-message-center/internal/svc"
-	"github.com/suyuan32/simple-admin-message-center/types/mcms"
+	"github.com/iot-synergy/synergy-message-center/internal/config"
+	"github.com/iot-synergy/synergy-message-center/internal/server"
+	"github.com/iot-synergy/synergy-message-center/internal/svc"
+	"github.com/iot-synergy/synergy-message-center/types/mcms"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"

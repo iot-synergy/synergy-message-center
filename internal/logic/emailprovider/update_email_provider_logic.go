@@ -2,16 +2,17 @@ package emailprovider
 
 import (
 	"context"
-	emailprovider2 "github.com/suyuan32/simple-admin-message-center/ent/emailprovider"
 	"net/smtp"
 
-	"github.com/suyuan32/simple-admin-message-center/internal/svc"
-	"github.com/suyuan32/simple-admin-message-center/internal/utils/dberrorhandler"
-	"github.com/suyuan32/simple-admin-message-center/types/mcms"
+	emailprovider2 "github.com/iot-synergy/synergy-message-center/ent/emailprovider"
 
-	"github.com/suyuan32/simple-admin-common/i18n"
+	"github.com/iot-synergy/synergy-message-center/internal/svc"
+	"github.com/iot-synergy/synergy-message-center/internal/utils/dberrorhandler"
+	"github.com/iot-synergy/synergy-message-center/types/mcms"
 
-	"github.com/suyuan32/simple-admin-common/utils/pointy"
+	"github.com/iot-synergy/synergy-common/i18n"
+
+	"github.com/iot-synergy/synergy-common/utils/pointy"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 

@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/suyuan32/simple-admin-message-center/ent/emaillog"
-	"github.com/suyuan32/simple-admin-message-center/ent/predicate"
+	"github.com/iot-synergy/synergy-message-center/ent/emaillog"
+	"github.com/iot-synergy/synergy-message-center/ent/predicate"
 )
 
 // EmailLogDelete is the builder for deleting a EmailLog entity.

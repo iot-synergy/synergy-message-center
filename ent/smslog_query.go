@@ -11,8 +11,8 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	uuid "github.com/gofrs/uuid/v5"
-	"github.com/suyuan32/simple-admin-message-center/ent/predicate"
-	"github.com/suyuan32/simple-admin-message-center/ent/smslog"
+	"github.com/iot-synergy/synergy-message-center/ent/predicate"
+	"github.com/iot-synergy/synergy-message-center/ent/smslog"
 )
 
 // SmsLogQuery is the builder for querying SmsLog entities.

@@ -6,7 +6,7 @@ import (
 
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/suyuan32/simple-admin-message-center/ent"
+	"github.com/iot-synergy/synergy-message-center/ent"
 )
 
 // WithTx uses transaction in ent.

@@ -5,7 +5,7 @@ import (
 	"entgo.io/ent/dialect/entsql"
 	"entgo.io/ent/schema"
 	"entgo.io/ent/schema/field"
-	"github.com/suyuan32/simple-admin-common/orm/ent/mixins"
+	"github.com/iot-synergy/synergy-common/orm/ent/mixins"
 )
 
 // EmailProvider holds the schema definition for the EmailProvider entity.
