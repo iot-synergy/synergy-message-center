@@ -13,9 +13,9 @@ ENV TZ=Asia/Shanghai
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk update --no-cache && apk add --no-cache tzdata
 
-COPY /app/mcms-rpc ./
+COPY /app/mcms_rpc ./
 COPY /app/etc/${CONFIG_FILE} ./etc/
 
 EXPOSE 9106
 
-ENTRYPOINT ./mcms-rpc -f etc/${CONFIG_FILE}
+ENTRYPOINT ./mcms_rpc -f etc/${CONFIG_FILE}
