@@ -4,17 +4,18 @@ Timeout: 5000
 
 DatabaseConf:
   Type: mysql
-  Host: 127.0.0.1
+  Host: database-1.chwxvihnhaot.us-east-2.rds.amazonaws.com
   Port: 3306
-  DBName: simple_admin
-  Username: # set your username
-  Password: # set your password
+  DBName: peckperk
+  Username: peckperk # set your username
+  Password: peckperk # set your password
   MaxOpenConn: 100
   SSLMode: disable
   CacheTime: 5
 
 RedisConf:
-  Host: 127.0.0.1:6379
+  Host: redis.synergy-prod:6379
+  Db: 1
 
 Log:
   ServiceName: mcmsRpcLogger

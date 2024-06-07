@@ -45,28 +45,44 @@ func (l *SendEmailLogic) SendEmail(in *mcms.EmailInfo) (*mcms.BaseUUIDResp, erro
 	}
 
 	var client *smtp.Client
-	var ok bool
+	//var ok bool
 
 	// client cache
-	if client, ok = l.svcCtx.EmailClientGroup[*in.Provider]; !ok {
-		providerData, err := l.svcCtx.DB.EmailProvider.Query().Where(emailprovider2.NameEQ(*in.Provider)).First(l.ctx)
-		if err != nil {
-			return nil, dberrorhandler.DefaultEntError(l.Logger, err, in)
-		}
+	// if client, ok = l.svcCtx.EmailClientGroup[*in.Provider]; !ok {
+	// 	providerData, err := l.svcCtx.DB.EmailProvider.Query().Where(emailprovider2.NameEQ(*in.Provider)).First(l.ctx)
+	// 	if err != nil {
+	// 		return nil, dberrorhandler.DefaultEntError(l.Logger, err, in)
+	// 	}
 
-		emailProviderConfig := &config.EmailConf{
-			AuthType:  email.ConvertAuthTypeToString(providerData.AuthType),
-			EmailAddr: providerData.EmailAddr,
-			Password:  providerData.Password,
-			HostName:  providerData.HostName,
-			Port:      int(providerData.Port),
-			TLS:       providerData.TLS,
-		}
-		l.svcCtx.EmailClientGroup[*in.Provider] = emailProviderConfig.NewClient()
-		l.svcCtx.EmailAddrGroup[*in.Provider] = emailProviderConfig.EmailAddr
+	// 	emailProviderConfig := &config.EmailConf{
+	// 		AuthType:  email.ConvertAuthTypeToString(providerData.AuthType),
+	// 		EmailAddr: providerData.EmailAddr,
+	// 		Password:  providerData.Password,
+	// 		HostName:  providerData.HostName,
+	// 		Port:      int(providerData.Port),
+	// 		TLS:       providerData.TLS,
+	// 	}
+	// 	l.svcCtx.EmailClientGroup[*in.Provider] = emailProviderConfig.NewClient()
+	// 	l.svcCtx.EmailAddrGroup[*in.Provider] = emailProviderConfig.EmailAddr
 
-		client = l.svcCtx.EmailClientGroup[*in.Provider]
+	// 	client = l.svcCtx.EmailClientGroup[*in.Provider]
+	// }
+
+	providerData, err := l.svcCtx.DB.EmailProvider.Query().Where(emailprovider2.NameEQ(*in.Provider)).First(l.ctx)
+	if err != nil {
+		return nil, dberrorhandler.DefaultEntError(l.Logger, err, in)
 	}
+	emailProviderConfig := &config.EmailConf{
+		AuthType:  email.ConvertAuthTypeToString(providerData.AuthType),
+		EmailAddr: providerData.EmailAddr,
+		Password:  providerData.Password,
+		HostName:  providerData.HostName,
+		Port:      int(providerData.Port),
+		TLS:       providerData.TLS,
+	}
+
+	client = emailProviderConfig.NewClient()
+	fromEmailAddress := emailProviderConfig.EmailAddr
 
 	// error handler
 	emailErrHandler := func(err error) (*mcms.BaseUUIDResp, error) {
@@ -87,7 +103,7 @@ func (l *SendEmailLogic) SendEmail(in *mcms.EmailInfo) (*mcms.BaseUUIDResp, erro
 		return nil, errorx.NewInternalError(i18n.Failed)
 	}
 
-	fromEmailAddress := l.svcCtx.EmailAddrGroup[*in.Provider]
+	// fromEmailAddress := l.svcCtx.EmailAddrGroup[*in.Provider]
 
 	// Setup headers
 	headers := make(map[string]string)
@@ -102,7 +118,7 @@ func (l *SendEmailLogic) SendEmail(in *mcms.EmailInfo) (*mcms.BaseUUIDResp, erro
 	}
 	message += "\r\n" + in.Content
 
-	err := client.Mail(fromEmailAddress)
+	err = client.Mail(fromEmailAddress)
 	if err != nil {
 		l.Logger.Errorw("failed to set the from address in email", logx.Field("detail", err), logx.Field("data", in))
 		return emailErrHandler(errors.Wrap(err, "failed to set the from address in email"))
