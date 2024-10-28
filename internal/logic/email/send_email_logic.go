@@ -111,6 +111,10 @@ func (l *SendEmailLogic) SendEmail(in *mcms.EmailInfo) (*mcms.BaseUUIDResp, erro
 	headers["To"] = strings.Join(in.Target, ",")
 	headers["Subject"] = in.Subject
 
+	if strings.Index(strings.TrimLeft(in.Content, ""), "<!DOCTYPE html>") == 0 {
+		headers["Content-Type"] = "text/html; charset=UTF-8"
+	}
+
 	// Setup message
 	message := ""
 	for k, v := range headers {
